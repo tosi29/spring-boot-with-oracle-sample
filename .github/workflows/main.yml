@@ -19,5 +19,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: Build
+      run: ./mvnw test-compile
+      
     - name: Test
       run: ./mvnw test
