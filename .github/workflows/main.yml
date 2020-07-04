@@ -12,8 +12,8 @@ jobs:
     services:
       oracle: 
         image: epiclabs/docker-oracle-xe-11g@sha256:404173b90d09d0619c854dd469c76c3e7256c88a7aac5d47e05f934ec7afae06
-        env:
-          TZ: "Asia/Tokyo"
+#        env:
+#          TZ: "Asia/Tokyo"
 #        ports: 
 #          - 1521:1521
 
