@@ -23,3 +23,7 @@ References:
 ```
 ./mvnw test
 ```
+
+## GitHub Actions
+
+https://github.com/tosi29/spring-boot-with-oracle-sample/blob/master/.github/workflows/main.yml
