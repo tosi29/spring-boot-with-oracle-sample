@@ -18,7 +18,7 @@ public class SampleService {
     }
 
     public SampleEntity generate() {
-        SampleEntity sampleEntity = new SampleEntity(null, UUID.randomUUID().toString(), LocalDateTime.now());
+        SampleEntity sampleEntity = new SampleEntity(UUID.randomUUID().toString(), LocalDateTime.now());
         sampleRepository.save(sampleEntity);
         return sampleEntity;
     }

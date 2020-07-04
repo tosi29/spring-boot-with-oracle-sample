@@ -13,9 +13,10 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Table(name = "sample")
 public class SampleEntity {
+//    @Id
+//    @GeneratedValue(strategy= GenerationType.IDENTITY)
+//    String id;
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
-    String id;
     String uuid;
     LocalDateTime time;
 }
