@@ -1,0 +1,25 @@
+name: Build and Test
+
+on:
+  push:
+    branches: [ '**' ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: adoptopenjdk:8-jdk-hotspot
+    env:
+      TZ: "Asia/Tokyo"
+    
+    services:
+      oracle: 
+        image: epiclabs/docker-oracle-xe-11g@sha256:404173b90d09d0619c854dd469c76c3e7256c88a7aac5d47e05f934ec7afae06
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Build
+      run: ./mvnw test-compile
+      
+    - name: Test
+      run: ./mvnw test
