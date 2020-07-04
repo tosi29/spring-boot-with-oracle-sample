@@ -25,5 +25,5 @@ References:
 ```
 
 ## GitHub Actions
-Test works with oracle db container
+Test works with oracle db container  
 https://github.com/tosi29/spring-boot-with-oracle-sample/blob/master/.github/workflows/main.yml
