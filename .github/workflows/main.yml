@@ -8,6 +8,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container: adoptopenjdk:8-jdk-hotspot
+    env:
+      TZ: "Asia/Tokyo"
     
     services:
       oracle: 
