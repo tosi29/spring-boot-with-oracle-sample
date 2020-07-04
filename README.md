@@ -2,12 +2,24 @@
 Sample for spring boot with oracle db
 
 
-## Setup oracle db by docker
-
-Docker 
-https://hub.docker.com/r/epiclabs/docker-oracle-xe-11g
+## Setup and Run Oracle db by docker
 
 ```
 docker pull epiclabs/docker-oracle-xe-11g
 docker run -d -p 1521:1521 epiclabs/docker-oracle-xe-11g
+```
+
+References:
+* https://hub.docker.com/r/epiclabs/docker-oracle-xe-11g
+
+## Run
+
+```
+./mvnw spring-boot:run
+```
+
+## Test
+
+```
+./mvnw test
 ```
