@@ -1,0 +1,24 @@
+name: Build and Test
+
+on:
+  push:
+    branches: [ '**' ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    services:
+      oracle: 
+        image: epiclabs/docker-oracle-xe-11g@sha256:404173b90d09d0619c854dd469c76c3e7256c88a7aac5d47e05f934ec7afae06
+        ports: 
+          - 1521:1521
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Build
+      run: ./gradlew build -x test
+
+    - name: Test
+      run: ./gradlew test
