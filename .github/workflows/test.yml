@@ -10,7 +10,7 @@ jobs:
 #    container: adoptopenjdk:8-jdk-hotspot
     container: 
       image: epiclabs/docker-oracle-xe-11g@sha256:404173b90d09d0619c854dd469c76c3e7256c88a7aac5d47e05f934ec7afae06
-      options: --entrypoint 'echo hogehoge'
+      options: --entrypoint 'cat /usr/sbin/startup.sh'
         
       
     env:
